@@ -87,8 +87,7 @@ This README is missing documentation of your endpoints. Below is an example for 
 ### GET '/questions'
 - Fetches a dictionary of question in which the keys are the id, question, answer, category and difficulty and their corresponding value are returned. This also fetches the dictionary of categories as explained above.
 - Request Arguments: None
-- Returns: An object with a single key, categories, that contains a object of id: category_string key:value pairs as explained above
-- Returns: All the question dictionary object, that contains a object's key:value pairs.
+- Returns: Multiple dictionary objects of question that conatins keys/value pairs for id, question, answer, category, difficulty. It will also return total question count and current category value.
 
 ```
 {
@@ -182,7 +181,6 @@ ith multi-bladed appendages?"
 }
 
 ```
-
 ### GET '/categories/id/questions'
 - Fetches a dictionary of question for given category id.
 - Request Arguments: id. Example: /categories/2/questions. To fetch questions for category 2.
@@ -228,7 +226,25 @@ nent of action painting?"
 }
 
 ```
+### DELETE '/questions/id'
+- Deletes a question record from the database for given category id.
+- Request Arguments: id. Example: /questions/10. To delete question record whose id is 10.
+- Returns: The deleted question dictionary key/value pairs. It also returns total question count in the database.
 
+```
+{
+  "Question deleted": {
+    "answer": "Brazil",
+    "category": 6,
+    "difficulty": 3,
+    "id": 10,
+    "question": "Which is the only team to play in every soccer World Cup tournament?"
+  },
+  "Total Question": 16,
+  "success": true
+}
+
+```
 
 ## Testing
 To run the tests, run
