@@ -91,7 +91,6 @@ This README is missing documentation of your endpoints. Below is an example for 
 - Returns: All the question dictionary object, that contains a object's key:value pairs.
 
 ```
-
 {
   "categories": {
     "1": "Science",
@@ -184,19 +183,50 @@ ith multi-bladed appendages?"
 
 ```
 
-### GET '/questions'
-- Fetches a dictionary of question in which the keys are the id, question, answer, category and difficulty and their corresponding value are returned. This also fetches the dictionary of categories as explained above.
-- Request Arguments: None
-- Returns: An object with a single key, categories, that contains a object of id: category_string key:value pairs as explained above
-- Returns: All the question dictionary object, that contains a object's key:value pairs.
-Example:
+### GET '/categories/id/questions'
+- Fetches a dictionary of question for given category id.
+- Request Arguments: id. Example: /categories/2/questions. To fetch questions for category 2.
+- Returns: Multiple dictionary objects of question that conatins keys/value pairs for id, question, answer, category, difficulty. It will also return total question count for the given category and current category value.
+
 ```
-{'id' : "2",
- 'question' : "In which royal palace would you find the Hall of Mirrors?",
- 'answer' : "The Palace of Versailles",
- 'category' : 3,
- 'difficulty' : 2,
+{
+  "current_category": 2,
+  "questions": [
+    {
+      "answer": "Escher",
+      "category": 2,
+      "difficulty": 1,
+      "id": 16,
+      "question": "Which Dutch graphic artist\u2013initials M C was a creator of optical illusions?"
+
+    },
+    {
+      "answer": "Mona Lisa",
+      "category": 2,
+      "difficulty": 3,
+      "id": 17,
+      "question": "La Giaconda is better known as what?"
+    },
+    {
+      "answer": "One",
+      "category": 2,
+      "difficulty": 4,
+      "id": 18,
+      "question": "How many paintings did Van Gogh sell in his lifetime?"
+    },
+    {
+      "answer": "Jackson Pollock",
+      "category": 2,
+      "difficulty": 2,
+      "id": 19,
+      "question": "Which American artist was a pioneer of Abstract Expressionism, and a leading expo
+nent of action painting?"
+    }
+  ],
+  "success": true,
+  "total_questions": 4
 }
+
 ```
 
 

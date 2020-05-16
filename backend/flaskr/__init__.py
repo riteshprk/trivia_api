@@ -182,18 +182,18 @@ def create_app(test_config=None):
     def get_question_catogories(current_category):
 
         questions_query = Question.query.filter(Question.category == current_category).all()
-        categories_query = Category.query.filter(Category.id == current_category).all()
+        #categories_query = Category.query.filter(Category.id == current_category).all()
         questions = [question.format() for question in questions_query]
-        categories = [category.format() for category in categories_query]
+        #categories = [category.format() for category in categories_query]
 
-        if categories == []:
-            abort(404)
+        # if categories == []:
+        #     abort(404)
 
         return jsonify({
             "success": True,
             "questions": questions,
             "total_questions": len(questions),
-            "categories": categories,
+            #"categories": categories,
             "current_category": current_category,
         })
 
