@@ -69,7 +69,7 @@ One note before you delve into your tasks: for each endpoint you are expected to
 
 ## Endpoints 
 
-This README is missing documentation of your endpoints. Below is an example for your endpoint to get all categories. Please use it as a reference for creating your documentation and resubmit your code. 
+Following is the list of all available endpoints. 
 
 ### GET '/categories'
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
@@ -369,6 +369,37 @@ ith multi-bladed appendages?"
   "success": true
 }
 ```
+## HTTP Errors response.
+
+In the event of HTTP fetch error. Following is the list of response object.
+
+|HTTP Error       	|Response Body                          |
+|-----------------	|:-------------------------------------:|
+|404 Error        	|{										|
+|  					|	"error": 404,						|
+|  					|	"message": "Not found",				|
+|  					|	"success": false 					|
+|					| }										|
+|					|										|					
+|404 Error        	|{										|
+|  					|	"error": 404,						|
+|  					|	"message": "Not found",				|
+|  					|	"success": false 					|
+|					| }										|
+|					|										|
+|404 Error        	|{										|
+|  					|	"error": 404,						|
+|  					|	"message": "Not found",				|
+|  					|	"success": false 					|
+|					| }										|
+|					|										|
+
+
+
+
+
+
+
 
 ## Testing
 To run the tests, run
