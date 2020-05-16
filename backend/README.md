@@ -375,7 +375,7 @@ In the event of HTTP fetch error. Following is the list of response object.
 
 |HTTP Error       	|Response Body                          											   |
 |-------------------|--------------------------------------------------------------------------------------|
-|404 Errors 		|{"error": 404,<br/>"success": false <br/>"success": false <br/>"success": false <br/>}|
+|404 Errors 		|{"error": 404, "success": false "message": "Not found"}                               |
 |404 Errors 		|{"error": 404,<br/>"success": false <br/>"success": false <br/>"success": false <br/>}|
   											
 
