@@ -331,9 +331,25 @@ ith multi-bladed appendages?"
   "total questions": 17
 }
 ```
-
-ritesh@LAPTOP-N1EA6EIA MINGW64 ~
-$
+### POST '/search'
+- Fetch dictionary of questions whose question value contains search term.
+- Request Arguments: json body object containing "searchTerm" key/value pairs.
+- Returns: Dictionary objects of questions containing keys/value pairs for id, question, answer, category, difficulty where question value contains search term. It also returns total question count value. For example: "searchTerm":body" return following result.
+```
+{
+  "questions": [
+    {
+      "answer": "The Liver",
+      "category": 1,
+      "difficulty": 4,
+      "id": 20,
+      "question": "What is the heaviest organ in the human body?"
+    }
+  ],
+  "success": true,
+  "total questions": 1
+}
+```
 
 ## Testing
 To run the tests, run
