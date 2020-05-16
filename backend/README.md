@@ -334,7 +334,7 @@ ith multi-bladed appendages?"
 ### POST '/search'
 - Fetch dictionary of questions whose question value contains search term.
 - Request Arguments: json body object containing "searchTerm" key/value pairs.
-- Returns: Dictionary objects of questions containing keys/value pairs for id, question, answer, category, difficulty where question value contains search term. It also returns total question count value. For example: "searchTerm":body" return following result.
+- Returns: Dictionary objects of questions containing keys/value pairs for id, question, answer, category, difficulty where question value contains search term. It also returns total question count value. For example: "searchTerm":"body" return following result.
 ```
 {
   "questions": [
@@ -348,6 +348,25 @@ ith multi-bladed appendages?"
   ],
   "success": true,
   "total questions": 1
+}
+```
+### POST '/quizzes'
+- Fetch dictionary of question for selected category.
+- Request Arguments: json body object containing quiz category id and type key/value pairs and previous questions list value. See the example below.
+```
+{"quiz_category":{"id":"1", "type":"science"}, "previous_questions":[]}
+```
+- Returns: Dictionary objects of question containing keys/value pairs for id, question, answer, category, difficulty.
+```
+{
+  "question": {
+    "answer": "98 %",
+    "category": 1,
+    "difficulty": 4,
+    "id": 110,
+    "question": "Humans and chimpanzees share roughly how much DNA?"
+  },
+  "success": true
 }
 ```
 
