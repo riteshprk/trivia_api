@@ -375,11 +375,11 @@ In the event of HTTP fetch error. Following is the list of response object.
 
 |HTTP Error       	|Response Body                          |
 |-------------------|---------------------------------------|
-|404 Error        	|*{										|
-|  					|*	"error": 404,						|
-|  					|*	"message": "Not found",				|
-|  					|*	"success": false 					|
-|					|*}										|					
+|        			|{										|
+|  					|	"error": 404,						|
+|  					|	"message": "Not found",				|
+|  					|	"success": false 					|
+|404 Error			|}										|					
 |404 Error        	|{										|
 |  					|	"error": 404,						|
 |  					|	"message": "Not found",				|
