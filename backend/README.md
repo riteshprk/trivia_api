@@ -375,16 +375,10 @@ In the event of HTTP fetch error. Following is the list of response object.
 
 |HTTP Error       	|Response Body                          											   |
 |-------------------|--------------------------------------------------------------------------------------|
+|400 Errors 		|{"error": 400, "success": false "message": "Bad request"}                             |
 |404 Errors 		|{"error": 404, "success": false "message": "Not found"}                               |
-|404 Errors 		|{"error": 404,<br/>"success": false <br/>"success": false <br/>"success": false <br/>}|
-  											
-
-
-
-
-
-
-
+|405 Errors 		|{"error": 405, "success": false "message": "Method not allowed"}				       |
+|422 Errors 		|{"error": 422, "success": false "message": "Unprocessable"}					       |
 
 ## Testing
 To run the tests, run
