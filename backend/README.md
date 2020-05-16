@@ -78,12 +78,6 @@ This README is missing documentation of your endpoints. Below is an example for 
 #POST '/search'
 #POST '/quizzes'
 
-| ##Endpoints        			| ##Description        							 |
-| ------------------------------|:----------------------------------------------:| 	
-| GET '/categories'  			| Fetches a dictionary of categories in which the| 	
-| 		        				| centered      								 |   	
-|				  				| are neat                                       |    	
-
 
 ##GET '/categories'
 - Fetches a dictionary of categories in which the keys are the ids and the value is the corresponding string of the category
@@ -95,6 +89,19 @@ This README is missing documentation of your endpoints. Below is an example for 
 '4' : "History",
 '5' : "Entertainment",
 '6' : "Sports"}
+
+##GET '/questions'
+- Fetches a dictionary of question in which the keys are the id, question, answer, category and difficulty and their corresponding value are returned. This also fetches the dictionary of categories as explained above.
+- Request Arguments: None
+- Returns: An object with a single key, categories, that contains a object of id: category_string key:value pairs as explained above
+- Returns: All the question dictionary object, that contains a object's key:value pairs.
+Example:
+{'id' : "2",
+ 'question' : "In which royal palace would you find the Hall of Mirrors?",
+ 'answer' : "The Palace of Versailles",
+ 'category' : 3,
+ 'difficulty' : 2,
+}
 
 ##GET '/questions'
 - Fetches a dictionary of question in which the keys are the id, question, answer, category and difficulty and their corresponding value are returned. This also fetches the dictionary of categories as explained above.
