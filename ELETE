@@ -1,0 +1,9 @@
+HTTP/1.0 405 METHOD NOT ALLOWED
+Content-Type: text/html; charset=utf-8
+Allow: DELETE, OPTIONS
+Content-Length: 178
+Access-Control-Allow-Header: Content-Type, Authorozation, True
+Access-Control-Allow-Methods: GET, POST, PATCH, DELETE, OPTIONS
+Server: Werkzeug/1.0.1 Python/3.8.2
+Date: Tue, 12 May 2020 15:11:06 GMT
+
