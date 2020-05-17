@@ -83,14 +83,24 @@ class Trivia_apiTestCase(unittest.TestCase):
         res = self.client().delete('/questions/7')
         data = json.loads(res.data)
 
-        self.assertEqual(res.status_code, 200)
-        self.assertEqual(data['success'], True)
+        if res.status_code == 200:
+            self.assertEqual(res.status_code, 200)
+            self.assertEqual(data['success'], True)
+        self.assertEqual(res.status_code, 422)
+        self.assertEqual(data['success'], False)
 
     def test_422_error_delete_questions(self):
-        res = self.client().delete('/questions/100')
+        res = self.client().delete('/questions/99999')
         data = json.loads(res.data)
 
         self.assertEqual(res.status_code, 422)
+        self.assertEqual(data['success'], False)
+
+    def test_404_error_delete_questions(self):
+        res = self.client().delete('/questions/qeeqe')
+        data = json.loads(res.data)
+
+        self.assertEqual(res.status_code, 404)
         self.assertEqual(data['success'], False)
 
     def test_create_questions(self):
