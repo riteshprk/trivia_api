@@ -214,7 +214,6 @@ def create_app(test_config=None):
                     "question": question
                 })
         except Exception as er:
-            print(er)
             abort(422)
 
     '''
